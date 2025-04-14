@@ -1,0 +1,102 @@
+.tovary {
+  text-align: center;
+  color: white;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.promotion-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+
+.promotion-items {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.features {
+  display: none;
+}
+
+.prices {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.discounted-price {
+  color: red;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.discounted-price::after {
+  content: "грн";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  color: red;
+}
+
+.coupon-price {
+  background-color: #ffdddd;
+  color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  position: relative;
+  padding-bottom: 15px;
+  margin-top: 5px;
+}
+
+.coupon-price::after {
+  content: "грн";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  color: red;
+}
