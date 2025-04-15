@@ -17,7 +17,6 @@
   margin-top: 20px;
 }
 
-
 .promotion-items {
   text-align: center;
   margin-bottom: 20px;
@@ -26,20 +25,44 @@
 .product-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-around;
+  gap: 10px;
 }
 
 .product-card {
   border: 1px solid #ccc;
-  padding: 15px;
-  width: 300px;
+  height: 600px;
+  width: 45%;
   text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-card {
+    width: 100%;
+  }
 }
 
 .product-card img {
-  max-width: 100%;
-  max-height: 150px;
+  max-width: 80%;
+  max-height: 200px;
   width: auto;
   height: auto;
   margin-bottom: 10px;
@@ -55,48 +78,65 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .old-price {
   text-decoration: line-through;
   color: #777;
   margin-bottom: 5px;
+  font-size: 1em;
 }
 
 .discounted-price {
-  color: red;
+  color: rgb(0, 0, 0);
   font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin-bottom: 5px;
   position: relative;
-  padding-bottom: 15px;
+  border:1px solid #b1acac;
 }
 
 .discounted-price::after {
   content: "грн";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 0.8em;
-  color: red;
+  color: white;
 }
 
 .coupon-price {
   background-color: #ffdddd;
   color: red;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
-  font-size: 0.9em;
+  font-size: 1em;
   position: relative;
-  padding-bottom: 15px;
-  margin-top: 5px;
 }
 
 .coupon-price::after {
   content: "грн";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 0.8em;
   color: red;
+}
+
+.prices > span {
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.prices > span:last-child {
+  margin-bottom: 0;
 }
